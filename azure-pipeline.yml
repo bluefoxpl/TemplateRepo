@@ -13,7 +13,7 @@ stages:
   jobs:
   - job:
   displayName: yamllint
-    steps :
+steps :
 task: PowerShell@2
   input s:
     targetType: 'inline'
