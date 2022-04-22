@@ -8,16 +8,6 @@ trigger:
     include:
       - master
 
-stages:
-- stage: CI_Checks
-  jobs:
-  - job:
-  displayName: yamllint
-steps :
-task: PowerShell@2
-  input s:
-    targetType: 'inline'
-    script : |
       # Write your PowerShell commands here.
       
       Write-Host "Hello World"
