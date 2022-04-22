@@ -1,6 +1,21 @@
 # Repo: MySpace/TemplateRepo
 
 # File: azure-pipeline.yml
+name: cicd_ci
+
+trigger:
+  branches:
+    include:
+      - master
+
+stages:
+- stage: CI_Checks
+  jobs:
+  - job:
+  displayName: yamllint_checks
+    pool:
+      vmImage: 'ubuntu-latest'
+    steps:
 task: PowerShell@2
   inputs:
     targetType: 'inline'
